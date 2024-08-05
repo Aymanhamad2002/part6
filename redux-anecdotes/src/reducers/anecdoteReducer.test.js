@@ -5,10 +5,9 @@ describe('anecdoteReducer', () => {
     test('return new anecdote with action NEW_ANECDOTE',() => {
         const state = []
         const action  = {
-            type:'NEW_ANECDOTE',
-            payload:{
-                content:"hello world"
-            }
+            type:'anecdotes/createAnecdote',
+            payload:"hello world"
+            
         }
         deepFreeze(state)
         const newState = reducer(state,action)
@@ -34,10 +33,9 @@ describe('anecdoteReducer', () => {
             }
         ]
         const action = {
-            type : 'VOTE_ANECDOTE',
-            payload: {
-                id:2
-            }
+            type : 'anecdotes/voteChangeHanlder',
+            payload:2
+            
         }
         deepFreeze(state)
         const newState = reducer(state,action)
