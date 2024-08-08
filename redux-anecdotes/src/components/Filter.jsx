@@ -2,6 +2,7 @@ import { handleFilter } from "../reducers/filterReducer"
 import { useDispatch } from "react-redux"
 
 const Filter = () => {
+    
     const dispatch = useDispatch()
     const handleFilterTextChange = (event) =>{
         dispatch(handleFilter(event.target.value))
